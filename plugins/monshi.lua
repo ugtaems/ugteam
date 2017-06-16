@@ -1,7 +1,7 @@
 ﻿--Start By 
 --help
 local function run(msg, matches) 
-local monshi = 257104993,289000262
+local monshi = 257104993
 if matches[1] == "اضافه" then 
 if not is_sudo(msg) then 
 return 'شما سودو نیستید' 
@@ -34,14 +34,14 @@ redis:del("bot:pm")
 return "منشی غیرفعال شد" 
 end
  end
-  if gp_type(msg.chat_id_) == "پیام" and   msg.content_.text_ then
+  if gp_type(msg.chat_id_) == "pv" and   msg.content_.text_ then
     local hash = ('bot:pm') 
     local pm = redis:get(hash)
 if gp_type(msg.chat_id_) == "channel" or gp_type(msg.chat_id_) == "chat" then
 return
 else
 tdcli.sendMessage(msg.chat_id_ , 0, 1, pm, 0, 'html')
-  tdcli.sendMessage(monshi , 0, 1,"پیام:".. msg.content_.text_.."\nآیدی فرستنده  :"..msg.sender_user_id_, 0, 'html')  end 
+  tdcli.sendMessage(monshi , 0, 1,"pv:".. msg.content_.text_.."\nآیدی فرستنده  :"..msg.sender_user_id_, 0, 'html')  end 
     end
 end
 return { 
@@ -51,7 +51,7 @@ patterns ={
 "^(monshi) (off)$", 
 "^(monshi) (.*)$",
 "^(pm)     (.*)$",
-"^(پیام)   (.*)$",
+"^(pv)   (.*)$",
 "^(.*)$",
 }, 
 run = run 
