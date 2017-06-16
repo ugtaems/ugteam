@@ -1135,7 +1135,7 @@ matches[3] then
 if matches[1] == 'sudolist' and is_sudo(msg) then
 return sudolist(msg)
     end
-if matches[1] == 'chats' and is_admin(msg) then
+if matches[1] =='گروه' and is_admin(msg) then
 return chat_list(msg)
     end
    if matches[1]:lower() == 'join' and is_admin(msg) and matches[2] then
@@ -1239,7 +1239,7 @@ text = [[
 ⭕️ tosuper
 ➖➖➖➖➖➖➖➖➖➖
   لیست گروه های مدیریتی ربات
-⭕️ chats
+⭕️ گروه
 ➖➖➖➖➖➖➖➖➖➖
   جوین شدن توسط ربات
 ⭕️ join/id
@@ -1311,7 +1311,8 @@ patterns = {
 "^[!/#](creategroup) (.*)$",
 "^[!/#](createsuper) (.*)$",
 "^[!/#](tosuper)$",
-"^[!/#](chats)$",
+"^(گروه)$",
+"^(گروه) (.*)$",
 "^[!/#](clear cache)$",
 "^[!/#](join) (.*)$",
 "^[!/#](rem) (.*)$",
