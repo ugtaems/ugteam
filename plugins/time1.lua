@@ -1,4 +1,4 @@
---Start By edit @mohammadrezajijji
+--Start By edit @ugteam
 function run(msg, matches)
 local url , res = http.request('http://api.gpmod.ir/time/')
 if res ~= 200 then return "No connection" end
@@ -7,8 +7,6 @@ local text = '*⏰Ir Time:* _'..jdat.FAtime..'_\n*📆Ir Data:* _'..jdat.FAdate.
   tdcli.sendMessage(msg.chat_id_, 0, 1, text, 1, 'md')
 end
 return {
-  patterns = {"^(ساعععععععععععععععععععععععع)$"}, 
+  patterns = {"^(ساعت)$"}, 
 run = run 
 }
---End By @mohammadrezajiji
---Channel @titantims
