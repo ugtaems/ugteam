@@ -75,8 +75,7 @@ function create_config( )
 		"ping",
 		"time1",
 		"write",
-		"addkick",
-        "monshi"		
+		"addkick",		
 	},
     sudo_users = {381761224},
     admins = {},
