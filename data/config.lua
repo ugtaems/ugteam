@@ -21,6 +21,8 @@ do local _ = {
     "warn",
     "muteall",
     "tamde",
+	"cht",
+	"helpfan",
     "CodeGift",
     "muteall"
   },
