@@ -27,7 +27,7 @@ redis:setex(hash, num4, true)
 if not lang then
  return "Mute all has been enabled for \n✅ hours : "..matches[3].."\n✅ minutes : "..matches[4].."\n✅ seconds : "..matches[5].."\n➖➖➖➖➖➖➖➖➖\n\nپشتیبانی  ربات یوگی  با ما امنیت  رو تجربه  کنید"
  elseif lang then
- return "بی صدا کردن فعال شد در \n✅ ساعت : "..matches[3].."\n✅ دقیقه : "..matches[4].."\n✅ ثانیه : "..matches[5].."\n➖➖➖➖➖➖➖➖➖\n\nپشتیبانی  ربات یوگی  با ما امنیت  رو تجربه  کنید"
+ return "تعطیلی گروه فعال شد در \n✅ ساعت : "..matches[3].."\n✅ دقیقه : "..matches[4].."\n✅ ثانیه : "..matches[5].."\n➖➖➖➖➖➖➖➖➖\n\nپشتیبانی  ربات یوگی  با ما امنیت  رو تجربه  کنید"
  end
  end
  end
@@ -44,7 +44,7 @@ redis:setex(hash, num4, true)
 if not lang then
  return "Mute all has been enabled for \n✅ hours : "..matches[3].."\n➖➖➖➖➖➖➖➖➖\n\nپشتیبانی  ربات یوگی  با ما امنیت  رو تجربه  کنید"
  elseif lang then
- return "بی صدا کردن فعال شد در \n✅ ساعت : "..matches[3].."\n➖➖➖➖➖➖➖➖➖\n\nپشتیبانی  ربات یوگی  با ما امنیت  رو تجربه  کنید"
+ return "تعطیلی گروه فعال شد در \n✅ ساعت : "..matches[3].."\n➖➖➖➖➖➖➖➖➖\n\nپشتیبانی  ربات یوگی  با ما امنیت  رو تجربه  کنید"
  end
  end
  end
@@ -61,7 +61,7 @@ redis:setex(hash, num4, true)
 if not lang then
  return "Mute all has been enabled for \n✅ minutes : "..matches[3].."\n➖➖➖➖➖➖➖➖➖\n\nپشتیبانی  ربات یوگی  با ما امنیت  رو تجربه  کنید"
  elseif lang then
- return "بی صدا کردن فعال شد در \n✅ دقیقه : "..matches[3].."\n➖➖➖➖➖➖➖➖➖\n\nپشتیبانی  ربات یوگی  با ما امنیت  رو تجربه  کنید"
+ return "تعطیلی گروه فعال شد در \n✅ دقیقه : "..matches[3].."\n➖➖➖➖➖➖➖➖➖\n\nپشتیبانی  ربات یوگی  با ما امنیت  رو تجربه  کنید"
  end
  end
  end
@@ -78,7 +78,7 @@ redis:setex(hash, num3, true)
 if not lang then
  return "Mute all has been enabled for \n✅ seconds : "..matches[3].."\n➖➖➖➖➖➖➖➖➖\n\nپشتیبانی  ربات یوگی  با ما امنیت  رو تجربه  کنید"
  elseif lang then
- return "بی صدا کردن فعال شد در \n✅ ثانیه : "..matches[3].."\n➖➖➖➖➖➖➖➖➖\n\nپشتیبانی  ربات یوگی  با ما امنیت  رو تجربه  کنید"
+ return "تعطیلی گروه فعال شد در \n✅ ثانیه : "..matches[3].."\n➖➖➖➖➖➖➖➖➖\n\nپشتیبانی  ربات یوگی  با ما امنیت  رو تجربه  کنید"
  end
  end
  end
@@ -86,23 +86,17 @@ if matches[1] == 'راهنما تعطیلی' then
 if not lang then
 text = [[
 *ug Mute Commands:*
-----------------------
-🔰 _Mute group at this time_
 *!mute all* `(hour) (minute) (seconds)`
-----------------------				
-🔰 _Mute group at this time_
+_Mute group at this time_ 
 *!mute hours* `(number)`
-----------------------	
-🔰 _Mute group at this time_ 
+_Mute group at this time_ 
 *!mute minute* `(number)`
-----------------------	
-🔰 _Mute group at this time_
+_Mute group at this time_ 
 *!mute seconds* `(number)`
- ----------------------	
-🔰 _Unmute group at this time_ 
+_Mute group at this time_ 
 *!unmute all*
-----------------------	
-_You can use_ ** _at the beginning of commands._				
+_Unmute group at this time_ 
+_You can use_ *[!/#]* _at the beginning of commands._				
 ]]
 elseif lang then
 text = [[
