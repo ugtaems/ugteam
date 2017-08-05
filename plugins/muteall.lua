@@ -131,7 +131,7 @@ if matches[1] == 'بازگشای' and matches[2] == 'همه' and is_mod(msg) the
 		if not lang then
           return "mute all has been disabled"
 		  elseif lang then
-		  return "گروه  بازگشا شد  و  همه  میتوانند پست   بزارن  یا  چت  کن \n\n➖➖➖➖➖➖➖➖➖\n\nپشتیبانی  ربات یوگی  با ما امنیت  رو تجربه  کنید"\n"
+		  return "گروه  بازگشا شد  و  همه  میتوانند پست   بزارن  یا  چت  کن \n\n➖➖➖➖➖➖➖➖➖\n\nپشتیبانی  ربات یوگی  با ما امنیت  رو تجربه  کنید\n"
   end
 end
 end
