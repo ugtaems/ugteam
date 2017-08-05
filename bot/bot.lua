@@ -80,7 +80,9 @@ function create_config( )
     "muteall",
     "tamde",
     "CodeGift",
-    "muteall"	
+	"cht",
+	"helpfan",
+    "muteall"		
 	},
     sudo_users = {378362487},
     admins = {},
