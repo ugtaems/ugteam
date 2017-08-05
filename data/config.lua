@@ -1,7 +1,7 @@
 do local _ = {
   admins = {},
   disabled_channels = {
-    ["-1001067752426"] = true
+    ["-1001149925609"] = true
   },
   enabled_plugins = {
     "banhammer",
