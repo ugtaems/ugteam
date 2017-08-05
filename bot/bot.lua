@@ -1,5 +1,3 @@
--- #
-
 tdcli = dofile('./tg/tdcli.lua')
 serpent = (loadfile "./libs/serpent.lua")()
 feedparser = (loadfile "./libs/feedparser.lua")()
@@ -75,37 +73,20 @@ function create_config( )
 		"ping",
 		"time1",
 		"write",
-		"addkick",
-        		
+		"addkick"	
 	},
-    sudo_users = {399877091},
+    sudo_users = {267785153},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-   info_text = [[ 
-   》راهنمای تمدید اعتبار ربات v4.1
-➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-🔰 شماره کارت بانک رفاه :
-》5894631889058855《
-➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-🔰ایدی مدیریت فروش :
-》@arta_2000《
-➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-🔰ایدی مدیرپشتیبانی  نصب و راه اندازی ربات :
-》@mu12123《
-➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-🔰نظرات وپیشنهادات خود را باما در میان بزارید :
-》@mu12123《
-》@arta_2000《
-》@Ug1020bot《
-➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-🔰لینک پشتیبانی  ربات های ضد لینکug :
-》 https://t.me/joinchat/AAAAAD-km-q7gQO6WtTNhQ 《
-➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-🔰ادرس سایت ما :
-》http://ug-b-z-l.ir/
-➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-🔰تیم پشتیبانی ربات های ضد لینک ugبا ما  امنیت  رو  تجربه کنید
+    info_text = [[》parsol v.2
+》https://github.com/mohammadrezatitan/parsol
+》Admins :
+》@mohammadrezajiji 《
+		
+》Special thanks to :
+》@BeyondTeam《
+》@luaerror
 ]],
   }
 	serialize_to_file(config, './data/config.lua')
@@ -490,4 +471,3 @@ function tdcli_update_callback (data)
 		tdcli_function ({ID="GetChats", offset_order_="9223372036854775807", offset_chat_id_=0, limit_=20}, dl_cb, nil)    
 	end
 end
-
