@@ -73,7 +73,7 @@ screen ./auto.sh
 
 اموزش های بیش تر در کانال
 
-# [musa](https://telegram.me/mu12123)
+# [musa](https://telegram.me/)
 
 
 ###  Telegram channel:
