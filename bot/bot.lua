@@ -82,20 +82,15 @@ function create_config( )
     "CodeGift",
 	"cht",
 	"helpfan",
-    "muteall"		
+    "muteall",
+    "CleanMember"	
 	},
     sudo_users = {378362487},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
     info_text = [[》parsol v.2
-》https://github.com/mohammadrezatitan/parsol
-》Admins :
-》@mohammadrezajiji 《
-		
-》Special thanks to :
-》@BeyondTeam《
-》@luaerror
+
 ]],
   }
 	serialize_to_file(config, './data/config.lua')
