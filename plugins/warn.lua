@@ -258,7 +258,7 @@ local hash = "gp_lang:"..msg.to.id
 local lang = redis:get(hash)
 local Chash = "cmd_lang:"..msg.to.id
 local Clang = redis:get(Chash)
-		if ((matches[1]:lower() == 'clean' and matches[2] == 'warns' and not Clang) or (matches[1] == "پاک کردن" and matches[2] == 'اخطار ها' and Clang)) then
+		if ((matches[1]:lower() == 'پاک کردن' and matches[2] == 'اخطار ها' and not Clang) or (matches[1] == "" and matches[2] == '' and Clang)) then
 			if not is_owner(msg) then
 				return
 			end
@@ -270,7 +270,7 @@ local Clang = redis:get(Chash)
      return "_تمام اخطار های کاربران این گروه پاک شد_"
 		end
   end
-		if ((matches[1]:lower() == 'setwarn' and not Clang) or (matches[1] == "حداکثر اخطار" and Clang)) then
+		if ((matches[1]:lower() == 'حداکثر اخطار' and not Clang) or (matches[1] == "" and Clang)) then
 			if not is_mod(msg) then
 				return
 			end
@@ -289,7 +289,7 @@ local Clang = redis:get(Chash)
      return "_حداکثر اخطار تنظیم شد به :_ *[ "..matches[2].." ]*"
 		end
   end
-if ((matches[1] == "warn" and not Clang) or (matches[1] == "اخطار" and Clang)) and is_mod(msg) then
+if ((matches[1] == "اخطار" and not Clang) or (matches[1] == "" and Clang)) and is_mod(msg) then
 if not matches[2] and msg.reply_id then
     tdcli_function ({
       ID = "GetMessage",
@@ -310,7 +310,7 @@ tdcli_function ({
     }, action_by_username, {chat_id=msg.to.id,username=matches[2],msg=msg,cmd="warn"})
       end
    end
-if ((matches[1] == "unwarn" and not Clang) or (matches[1] == "حذف اخطار" and Clang)) and is_mod(msg) then
+if ((matches[1] == "حذف اخطار" and not Clang) or (matches[1] == "" and Clang)) and is_mod(msg) then
 if not matches[2] and msg.reply_id then
     tdcli_function ({
       ID = "GetMessage",
@@ -331,7 +331,7 @@ tdcli_function ({
     }, action_by_username, {chat_id=msg.to.id,username=matches[2],msg=msg,cmd="unwarn"})
      end
 	end
-	if ((matches[1] == "warnlist" and not Clang) or (matches[1] == "لیست اخطار" and Clang)) and is_mod(msg) then
+	if ((matches[1] == "لیست اخطار" and not Clang) or (matches[1] == "" and Clang)) and is_mod(msg) then
 	local list = 'Warn Users List:\n'
 local empty = list
 		for k,v in pairs (redis:hkeys(msg.to.id..':warn')) do
@@ -344,7 +344,7 @@ local empty = list
       end
     end
 		if list == empty then
-		return '_WarnList is Empty_'
+		return '_لیست اخطار خالی داداچ عزیزم _'
 		else
 		return list
 		end
@@ -362,23 +362,16 @@ end
 
 return {
   patterns = {
-  "^[#!/](warn)$",
-  "^[#!/](warn) (.*)$",
-  "^[#!/](unwarn)$",
-  "^[#!/](unwarn) (.*)$",
-  "^[!/#](setwarn) (%d+)$",
-  "^[#!/](clean) (warns)$",
-  "^[#!/](warnlist)$",
   "^(اخطار)$",
   "^(اخطار) (.*)$",
   "^(حذف اخطار)$",
   "^(حذف اخطار) (.*)$",
-"^(حداکثر اخطار) (%d+)$",
+  "^(حداکثر اخطار) (%d+)$",
   "^(پاک کردن) (اخطار ها)$",
   "^(لیست اخطار)$",
+
 
   },
   run = BeyondTeam,
 	pre_process = pre_process
 }
-
