@@ -60,7 +60,7 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
 	config = {
     enabled_plugins = {
-    "banhammer",
+   "banhammer",
     "groupmanager",
     "msg-checks",
     "plugins",
@@ -77,13 +77,16 @@ function create_config( )
     "SolvedOffline",
     "clean",
     "warn",
-    "muteall",
+    "helpme",
     "tamde",
     "CodeGift",
-	"cht",
-	"helpfan",
+    "cht",
+    "helpfan",
     "muteall",
-    "CleanMember"	
+    "addBy",
+    "gifug",
+    "warnlink",
+    "adddl",	
 	},
     sudo_users = {378362487},
     admins = {},
