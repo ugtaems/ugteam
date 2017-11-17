@@ -89,7 +89,7 @@ function create_config( )
     "adddl",	
 	},
     sudo_users = {378362487},
-    admins = {},
+    admins = {427703984},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
     info_text = [[》parsol v.2
